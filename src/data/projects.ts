@@ -36,6 +36,7 @@ export const projects: Project[] = [
       "Media handling",
       "Responsive chat interface",
     ],
+    live: "https://vchatieapp.onrender.com/",
     flagship: true,
   },
   {
@@ -88,6 +89,7 @@ export const projects: Project[] = [
       "Add page numbers & sign",
       "Real-time progress",
     ],
+    live: "https://vjdoc.vercel.app/",
     flagship: true,
   },
 ];

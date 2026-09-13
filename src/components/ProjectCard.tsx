@@ -33,9 +33,29 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     y.set(0);
   };
 
+  // Open the project's live URL when the card is clicked/tapped.
+  const openProject = (e?: React.SyntheticEvent) => {
+    e?.preventDefault();
+    if (project.live) window.open(project.live, "_blank", "noopener,noreferrer");
+  };
+
+  const handleCardKeyDown = (e: React.KeyboardEvent) => {
+    if (project.live && (e.key === "Enter" || e.key === " ")) {
+      e.preventDefault();
+      openProject();
+    }
+  };
+
+  const clickable = Boolean(project.live);
+
   return (
     <motion.div
-      className={`relative ${project.flagship ? "md:col-span-2" : ""}`}
+      className={`relative ${clickable ? "cursor-pointer" : ""} ${project.flagship ? "md:col-span-2" : ""}`}
+      onClick={clickable ? openProject : undefined}
+      onKeyDown={clickable ? handleCardKeyDown : undefined}
+      role={clickable ? "link" : undefined}
+      tabIndex={clickable ? 0 : undefined}
+      aria-label={clickable ? `Open ${project.title} live demo` : undefined}
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -170,6 +190,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  onKeyDown={(e) => e.stopPropagation()}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/[0.06] text-sm text-muted hover:text-white hover:border-white/[0.12] hover:bg-white/[0.04] transition-all duration-300"
                 >
                   <GithubIcon className="w-4 h-4" />
@@ -181,6 +203,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
+                  onKeyDown={(e) => e.stopPropagation()}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-violet-500/20"
                   style={{
                     background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",

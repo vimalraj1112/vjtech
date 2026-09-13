@@ -44,7 +44,7 @@ export const projects: Project[] = [
     category: "ISP Operations & Billing Platform",
     description:
       "An enterprise CRM for internet service providers — managing customers, feasibility, provisioning, billing, support tickets and day-to-day operational workflows in one place.",
-    image: "/images/superlink-crm.png",
+    image: "/images/vj-doc.png",
     technologies: [
       "React",
       "TypeScript",
@@ -71,7 +71,7 @@ export const projects: Project[] = [
     category: "All-in-One PDF Toolkit",
     description:
       "A premium iLovePDF-style web app for converting, merging, splitting, compressing, watermarking and signing PDF documents — with a fast drag-and-drop workflow and real in-browser processing.",
-    image: "/images/vj-doc.png",
+    image: "/images/superlink-crm.png",
     technologies: [
       "React",
       "TypeScript",
@@ -88,5 +88,6 @@ export const projects: Project[] = [
       "Add page numbers & sign",
       "Real-time progress",
     ],
+    flagship: true,
   },
 ];

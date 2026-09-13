@@ -64,6 +64,7 @@ export const projects: Project[] = [
       "Role-based access control",
       "Dashboards & audit logs",
     ],
+    live: "https://shreeyugan.vercel.app/",
     flagship: true,
   },
   {

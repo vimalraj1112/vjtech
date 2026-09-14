@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { Send, Loader2, CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -24,6 +24,11 @@ export default function ContactForm() {
   const [state, setState] = useState<FormState>({ status: "idle", message: "" });
 
   const configured = Boolean(SERVICE_ID && TEMPLATE_ID && PUBLIC_KEY);
+
+  // Initialize EmailJS with the public key once on mount.
+  useEffect(() => {
+    if (configured) emailjs.init(PUBLIC_KEY!);
+  }, [configured]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -61,8 +66,7 @@ export default function ContactForm() {
           subject: subject || "New message from your portfolio",
           message,
           to_name: "Vimal",
-        },
-        PUBLIC_KEY
+        }
       );
       setState({
         status: "success",

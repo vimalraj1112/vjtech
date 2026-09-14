@@ -9,11 +9,12 @@ interface FormState {
   message: string;
 }
 
-// Populated from Vercel / local env vars.
-// See .env.example for the three values needed.
-const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+// EmailJS credentials — public by design (the Public Key is meant to be exposed
+// to the browser). Falls back to hardcoded values so the form works on Vercel
+// without any env vars configured.
+const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || "service_jutuoen";
+const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || "template_r6alk9h";
+const PUBLIC_KEY = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || "HWy2KOH7D9oDWASFb";
 
 export default function ContactForm() {
   const [name, setName] = useState("");

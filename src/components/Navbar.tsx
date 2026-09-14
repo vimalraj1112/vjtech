@@ -65,8 +65,7 @@ export default function Navbar() {
             className="text-xl font-bold tracking-tight cursor-pointer"
             style={{ fontFamily: "var(--font-space-grotesk)" }}
           >
-            <span className="gradient-text">Vimal</span>
-            <span className="text-muted">.</span>
+            <span className="gradient-text">VjTech</span>
           </button>
 
           {/* Desktop Links */}

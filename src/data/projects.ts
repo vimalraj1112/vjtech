@@ -64,7 +64,6 @@ export const projects: Project[] = [
       "Role-based access control",
       "Dashboards & audit logs",
     ],
-    live: "https://shreeyugan.vercel.app/",
     flagship: true,
   },
   {
@@ -92,5 +91,58 @@ export const projects: Project[] = [
     ],
     live: "https://vjdoc.vercel.app/",
     flagship: true,
+  },
+  {
+    id: "cafe-pos",
+    title: "SuperLink CaféPOS",
+    category: "Griglia Café · Restaurant POS & Inventory",
+    description:
+      "A complete point-of-sale and management system for cafés and restaurants — handling orders, table service, menu items, inventory and daily sales in one clean, fast interface.",
+    image: "/images/superlink-pos.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "Express", "PostgreSQL"],
+    features: [
+      "Order & table management",
+      "Menu & category builder",
+      "Inventory tracking",
+      "Sales & billing",
+      "Live product catalog",
+      "Fast, responsive UI",
+    ],
+    live: "https://pos-demo-pink.vercel.app/",
+    flagship: true,
+  },
+  {
+    id: "shreeyugan",
+    title: "ShreeYugan",
+    category: "Hardware, Electrical & Plumbing Store",
+    description:
+      "A modern retail showcase for a hardware, electrical, plumbing and painting materials store in Tirunelveli — presenting product categories and store services in a clean bilingual layout.",
+    image: "/images/shreeyugan.png",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    features: [
+      "Product category showcase",
+      "Bilingual Tamil & English UI",
+      "Service highlights",
+      "Store branding",
+      "Responsive layout",
+    ],
+    live: "https://shreeyugan.vercel.app/",
+  },
+  {
+    id: "bakery",
+    title: "Ayyangar's Bakery",
+    category: "Homemade Cakes & Bakery Store",
+    description:
+      "A warm, inviting website for a hometown bakery serving the softest, most delicious homemade cakes — celebrating Nellai's sweetest celebrations with a cozy brand feel.",
+    image: "/images/bakery.png",
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    features: [
+      "Menu & cake showcase",
+      "Warm brand identity",
+      "Story & values section",
+      "Order-friendly layout",
+      "Responsive design",
+    ],
+    live: "https://bakery-mu-drab.vercel.app/",
   },
 ];

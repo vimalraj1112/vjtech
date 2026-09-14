@@ -37,6 +37,17 @@ export default function ContactForm() {
       return;
     }
 
+    // EmailJS isn't configured yet — give a clear message instead of a
+    // generic network error.
+    if (!configured) {
+      setState({
+        status: "error",
+        message:
+          "Email isn't configured yet. Add the three NEXT_PUBLIC_EMAILJS_* vars to your .env.local and restart the dev server.",
+      });
+      return;
+    }
+
     setState({ status: "sending", message: "" });
 
     try {

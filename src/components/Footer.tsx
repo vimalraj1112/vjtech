@@ -25,8 +25,7 @@ export default function Footer() {
               className="text-xl font-bold tracking-tight cursor-pointer mb-3 block"
               style={{ fontFamily: "var(--font-space-grotesk)" }}
             >
-              <span className="gradient-text">Vimal</span>
-              <span className="text-muted">.</span>
+              <span className="gradient-text">VjTech</span>
             </button>
             <p className="text-sm text-muted leading-relaxed max-w-xs">
               Software Developer building modern digital experiences.

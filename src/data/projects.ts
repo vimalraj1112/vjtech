@@ -145,4 +145,22 @@ export const projects: Project[] = [
     ],
     live: "https://bakery-mu-drab.vercel.app/",
   },
+  {
+    id: "mathi-collections-pos",
+    title: "Mathi Collections POS",
+    category: "Textiles Retail · POS & Billing System",
+    description:
+      "A full-stack point-of-sale and billing system for a textiles store — handling bills, product variants, inventory, customers, GST, purchases, returns, expenses, loyalty rewards and printed invoices in one fast interface.",
+    image: "/images/Textile-POS.png",
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Recharts", "React Query", "Axios"],
+    features: [
+      "Instant billing & invoice printing (80mm thermal / A4)",
+      "Product variants with barcode & stock tracking",
+      "Inventory management & low-stock alerts",
+      "Customer credit & loyalty points",
+      "GST invoicing & tax handling",
+      "Sales, profit & payment reports",
+    ],
+    live: "https://textiles-billing-pos.onrender.com/",
+  },
 ];

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, MessageCircle } from "lucide-react";
+import { ArrowDown, Download, MessageCircle } from "lucide-react";
 import AnimatedText from "./AnimatedText";
 import MagneticButton from "./MagneticButton";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
@@ -126,6 +126,15 @@ export default function Hero() {
             >
               Contact Me
             </MagneticButton>
+
+            <a
+              href="/resume.pdf"
+              download
+              className="flex items-center gap-2 px-7 py-3.5 rounded-xl font-semibold text-sm cursor-pointer border border-emerald-400/20 text-emerald-300 hover:bg-emerald-400/[0.06] hover:border-emerald-400/40 transition-all duration-300"
+            >
+              <Download className="w-4 h-4" />
+              Resume
+            </a>
           </div>
 
           {/* Social Links */}

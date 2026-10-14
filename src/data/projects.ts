@@ -163,4 +163,30 @@ export const projects: Project[] = [
     ],
     live: "https://textiles-billing-pos.onrender.com/",
   },
+  {
+    id: "superlink-community",
+    title: "SuperLink Community",
+    category: "Apartment Community & Visitor Management Platform",
+    description:
+      "A full-stack smart-living platform for apartment communities — unifying visitor passes, gate security, maintenance billing, complaints, amenity bookings, parking, emergency alerts and community announcements in one connected system.",
+    image: "/images/appartment-community.png",
+    technologies: [
+      "React",
+      "React Router",
+      "TanStack Query",
+      "Socket.IO",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Zod",
+    ],
+    features: [
+      "Visitor passes with QR verification & gate logs",
+      "Maintenance billing & online payments",
+      "Complaint ticketing with live status",
+      "Amenity bookings, parking & vehicle registry",
+      "Real-time emergency SOS alerts",
+      "Announcements & community feed",
+    ],
+    live: "https://appartment-web.onrender.com/",
+  },
 ];
